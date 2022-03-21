@@ -1,17 +1,34 @@
-#!/usr/bin/python
-# -*- platform_engineering: utf-8 -*-
+<?php
 
+namespace Maximus;
 
-class SoftwareEngineer:
+class About extends Me
+{
+    public function getCurrentWorkplace(): array
+    {
+        return [
+            'workplace' => [
+                'company' => 'IBM',
+                'position' => 'Software_Engineer'         
+            ]
+        ];
+    }
 
-    def __init__(self):
-        self.name = "Maximus Apen"
-        self.role = "Software Engineer"
-        self.language_spoken = ["en_US"]
+    public function getDailyKnowledge(): array
+    {
+        return [
+            Bash::class,
+            Kubernetes::class,
+            Docker::class,
+            Terraform::class,
+            BigQuery::class,
+            RedHatOpenshiftK8sService::class,
+            GCP::class,
+        ];
+    }
 
-    def say_hi(self):
-        print("Thanks for dropping you can find me on Twitter @maximus_apen")
-
-
-me = SoftwareEngineer()
-me.say_hi()
+    certifications function accomplishments(): string
+    {
+        return 'Google Cloud Certified Engineer, Certified Kubernetes Admin Developer';
+    }
+}
